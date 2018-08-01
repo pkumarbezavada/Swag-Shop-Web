@@ -1,40 +1,22 @@
-import React, {component} from 'react';
+import React, {Component} from 'react';
 import './wishList.css';
 import DataService from '../service/data-service'
+import NotificationService, {NOTIF_WISHLIST_CHANGED} from  '../service/notification.js';
+
 import ProductCondensed from '../product-condensed/product-condensed';
-import NotificationService, {NOTIF_WISHLIST_CHANGED} from  '../service/notification';
+
+
 let ns = new NotificationService();
 
 
-class WishList extends component{
+class WishList extends Component{
     
     
         
         constructor(props) {
             
             super(props);
-            this.state = {WishList : [
-//                {
-//                    title:"Prasanna",
-//                    price:23,
-//                    _id:"wasfe23asfa"
-//                    
-//                },
-//                {
-//                    title:"Prasannas",
-//                    price:233,
-//                    _id:"wasfe23asfd"
-//                    
-//                },
-//                {
-//                    title:"Prasannass",
-//                    price:2333,
-//                    _id:"wasfe23asfg"
-//                    
-//                }
-                
-            ]};
-            
+            this.state = {wishList:[]};
             //bind functions
             
             this.createWishList = this.createWishList.bind(this);
@@ -49,7 +31,7 @@ class WishList extends component{
         
     
     componentWillUnmount() {
-        ns.addObserver(this, NOTIF_WISHLIST_CHANGED);
+        ns.removeObserver(this, NOTIF_WISHLIST_CHANGED);
     }
     
     onWishListChanged(newWishList) {
@@ -61,9 +43,9 @@ class WishList extends component{
             
             const list = this.state.wishList.map((product) => 
                                         
-                  <productCondensed product={product} key={product._id} />                              
+                  <ProductCondensed product={product} key={product._id} />                              
                                                 
-                                                );
+             );                              
             
         return (list);
         

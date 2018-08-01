@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React,{ Component } from 'react';
+import logo from '../logo.svg';
 import './App.css';
-import WishList from '../wishList/wishList';
-
 import HttpService from '../service/http-service';
-import Product from '../product/product';
+import WishList from '../wishList/wishList.js';
+
+
+import Product from '../product/product.js';
+
 
 
 const http = new HttpService();
@@ -13,6 +15,7 @@ class App extends Component {
     
     constructor(props) {
         super(props);
+//        http.getProducts();
         this.state = {products:[]};
        this.loadData = this.loadData.bind(this);
         this.productList = this.productList.bind(this);
@@ -23,9 +26,8 @@ class App extends Component {
     loadData = () => {
         var self = this;
         http.getProducts().then(data => {
-            //console.log(products);
+            
             self.setState({products: data});
-          
         }, err => {
             
             
@@ -39,11 +41,11 @@ class App extends Component {
             
             <div className="col-sm-4" key={product._id}>
             
-            <product product={product}/>
-            
+            <Product title={product.title} price={product.price} imgUrl={product.imgUrl}/>
             </div>
         
         );
+        
         return (list);
         
     }
@@ -63,16 +65,14 @@ class App extends Component {
             </div></div>
             <div className="col-sm-4">
             
-            <wishList />
+            <WishList />
             </div>
-            {this.productList()}
 
-        <product price="4.23" class="col-sm-4" title="cool  Toy Gun" imgUrl="http://americanlookout.com/wp-content/uploads/2017/05/54ca62c3d99f0_-_waterguns-5.jpg"/>
-            <product price="4.23" class="col-sm-4" title="cool  Toy Gun" imgUrl="http://americanlookout.com/wp-content/uploads/2017/05/54ca62c3d99f0_-_waterguns-5.jpg"/>
-            <product price="4.23" class="col-sm-4" title="cool  Toy Gun" imgUrl="http://americanlookout.com/wp-content/uploads/2017/05/54ca62c3d99f0_-_waterguns-5.jpg"/>
+
         </div>
-               </div> 
+        </div> 
         </div>
+
     );
   }
 }

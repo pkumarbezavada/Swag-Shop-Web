@@ -1,11 +1,13 @@
-.product{
+.product {
     
     max-width:15rem;
+    margin-left: 10px;
+    
     
 }
-.product{
+.product img {
     
-    max-height:10rem;
+    max-height:70rem;
     
     
 }

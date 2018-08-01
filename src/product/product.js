@@ -1,11 +1,11 @@
-import React, {component} from 'react';
+import React, {Component} from 'react';
 import './product.css';
 import DataService from '../service/data-service';
 import NotificationService, {NOTIF_WISHLIST_CHANGED} from  '../service/notification';
 let ds = new DataService();
 let ns = new NotificationService();
 
-class Product extends component{
+class Product extends Component{
     
     constructor(props) {
         
@@ -68,8 +68,8 @@ class Product extends component{
         <img className="card-img-top" src={this.props.imgUrl} alt="Product"></img>
             <div className="card-block">
             <h4 className="card-title">{this.props.title}</h4>
-                <p classNmae="card-text">price:${this.props.price}</p>
-                <a href="#" onClick= {() => this.onButtonClicked()} className={btnClass}>{this.state.onWishList ? "Remove from wishlist" : "Add to cart" }</a>
+                <p className="card-text">price: ${this.props.price}</p>
+                <a href="#" onClick= {() => this.onButtonClicked()} className={btnClass}>{this.state.onWishList ? "Remove from wishlist" : "Add to WishList" }</a>
             
             </div>
         

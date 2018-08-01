@@ -1,10 +1,10 @@
-import React, {component} from 'react';
+import React, {Component} from 'react';
 import './product-condensed.css';
 import DataService from '../service/data-service';
 let ds = new DataService();
 
 
-class ProductCondensed extends component{
+class ProductCondensed extends Component{
     
     constructor(props) {
         

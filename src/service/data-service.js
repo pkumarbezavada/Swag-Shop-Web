@@ -1,4 +1,4 @@
-import NotificationService, {NOTIF_WISHLIST_CHANGED} from "./notification";
+import NotificationService, {NOTIF_WISHLIST_CHANGED} from "./notification.js";
 
 let ns = new NotificationService();
 
@@ -15,11 +15,11 @@ class DataService {
         }
         return instance;
     }
-    
+
     
     itemOnWishList = item => {
-        
         for(var x = 0; x < wishList.length; x++) {
+            
             if(wishList[x]._id === item._id){
                 return true;
             }
@@ -51,5 +51,4 @@ class DataService {
     }
     
 }
-
 export default DataService;
