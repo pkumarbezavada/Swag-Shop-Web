@@ -1,5 +1,5 @@
-.pc-condensed a{
-    
-    margin-right :25px;
-    
+.pc-condensed a {
+    margin-right: 25px;
 }
+
+/*<Product title={product.title} key={product._id} value={product._id.toString()} price={product.price} imgUrl={product.imgUrl}/>*/

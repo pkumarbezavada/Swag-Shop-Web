@@ -1,13 +1,8 @@
 .product {
-    
-    max-width:15rem;
-    margin-left: 10px;
-    
-    
+    max-width: 11rem;
+    max-height: 30rem;
 }
+
 .product img {
-    
-    max-height:70rem;
-    
-    
+    max-height: 10rem;
 }
