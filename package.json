@@ -2,12 +2,13 @@
   "name": "swag-shop-web",
   "version": "0.1.0",
   "private": true,
-    "homepage": "https://prasanna.github.io/swag-shop-web/#",
+  "homepage": "https://prasanna.github.io/swag-shop-web/#",
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
+    "url-parse": "^1.4.3",
     "whatwg-fetch": "^2.0.4"
   },
   "scripts": {
