@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  # Swag-Shop-Web
  This is a simple E-commerce application where users can add or remove products from their cart or wishlist.<br>
 • The UI for this project was developed using `HTML5, CSS3, Bootstrap and React`.<br>
@@ -209,3 +210,6 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 By default, the generated project uses the latest version of React.
 
 You can refer [to the React documentation](https://reactjs.org/docs/react-dom.html#browser-support) for more information about supported browsers.
+=======
+# swag-shop-web
+>>>>>>> eaebf71e8c03948b3ff5fff2586f5bcd96aa9ea4
