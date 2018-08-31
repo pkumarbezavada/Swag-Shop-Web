@@ -1,8 +1,13 @@
 .product {
-    max-width: 11rem;
-    max-height: 30rem;
+   margin: 2rem;
+    padding: 1rem;
+    background: transparent;
+    box-shadow: 2px 2px 2px grey;
 }
 
 .product img {
     max-height: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
 }
